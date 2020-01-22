@@ -1,0 +1,28 @@
+{
+  "name": "cra-template-typekit",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typekit"
+  ],
+  "description": "Opinionated Create React App template with typescript, redux-toolkit, react-testing-library.",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rrebase/cra-template-typekit.git",
+    "directory": "/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.10"
+  },
+  "bugs": {
+    "url": "https://github.com/rrebase/cra-template-typekit/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}

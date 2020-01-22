@@ -1,0 +1,16 @@
+{
+  "workbench.settings.editor": "json",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.snippetSuggestions": "top",
+  "javascript.format.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "extensions": [".ts", ".js", ".tsx"]
+  },
+  "eslint.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
