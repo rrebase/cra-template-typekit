@@ -1,0 +1,28 @@
+.container {
+  margin-top: 1rem;
+}
+
+.button {
+  margin: 0 0.75rem;
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: #5fd0ae;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    border-style: solid;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.value {
+  font-size: 5rem;
+  color: #5fd0ae;
+}
