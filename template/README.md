@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using [cra-template-typekit](https://github.com/rrebase/cra-template-typekit)
 
 ## Available Scripts
 
@@ -36,6 +36,19 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `test:coverage`
+
+Run all tests with `--coverage`. Html output will be in `coverage/`.
+
+### `yarn lint`
+
+Lints the code for eslint errors and compiles TypeScript for typing errors.
+Update `rules` in `.eslintrc` if you are not satisifed with some of the default errors/warnings.
+
+### `yarn lint:fix`
+
+Same as `yarn lint`, but also automatically fixes problems.
 
 ## Learn More
 
