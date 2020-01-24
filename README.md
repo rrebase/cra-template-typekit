@@ -2,15 +2,13 @@
   <h1>cra-template-typekit</h1>
 
   <div align="center">
-    <img src="./assets/logo.png" alt="logo" width="260px">
+    <img src="./assets/logo.png" alt="logo" width="390px">
   </div>
 
   <p>Opinionated template for Create React App.</p>
 </div>
 
 <br />
-
-<hr>
 
 <!-- prettier-ignore-start -->
 [![version][version-badge]][package]
@@ -41,7 +39,7 @@ npx create-react-app my-app --template typekit
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
-[version-badge]: https://img.shields.io/npm/v/rrebase/cra-template-typekit.svg?style=flat-square
+[version-badge]: https://img.shields.io/npm/v/cra-template-typekit.svg?style=flat-square
 [package]: https://www.npmjs.com/package/cra-template-typekit
 [license-badge]: https://img.shields.io/npm/l/rrebase/cra-template-typekit.svg?style=flat-square
 [license]: https://github.com/rrebase/cra-template-typekit/blob/master/LICENSE
