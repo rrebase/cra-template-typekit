@@ -5,7 +5,7 @@
     <img src="./assets/logo.png" alt="logo" width="260px">
   </div>
 
-  <p>Opinionated template for [Create React App](https://github.com/facebook/create-react-app).</p>
+  <p>Opinionated template for Create React App.</p>
 </div>
 
 <br />
@@ -14,8 +14,6 @@
 
 <!-- prettier-ignore-start -->
 [![version][version-badge]][package]
-[![MIT License][license-badge]][license]
-
 [![PRs Welcome][prs-badge]][prs]
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
@@ -56,4 +54,5 @@ npx create-react-app my-app --template typekit
 [github-watch]: https://github.com/rrebase/cra-template-typekit/watchers
 [github-star-badge]: https://img.shields.io/github/stars/rrebase/cra-template-typekit.svg?style=social
 [github-star]: https://github.com/rrebase/cra-template-typekit/stargazers
+[cra]: https://github.com/facebook/create-react-app
 <!-- prettier-ignore-end -->
