@@ -9,7 +9,7 @@ const Counter: React.FC = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className={styles.container}>
+    <div>
       <p className={styles.value}>{count}</p>
       <button
         className={styles.button}
