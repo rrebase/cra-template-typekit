@@ -32,28 +32,6 @@
       "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}'",
       "lint:fix": "yarn lint --quiet --fix"
     },
-    "eslintConfig": {
-      "parser": "@typescript-eslint/parser",
-      "extends": [
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended",
-        "prettier/@typescript-eslint"
-      ],
-      "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off"
-      },
-      "settings": {
-        "react": {
-          "version": "detect"
-        }
-      },
-      "ignorePatterns": [
-        "coverage/",
-        "node_modules/",
-        "src/serviceWorker.ts"
-      ]
-    },
     "jest": {
       "coveragePathIgnorePatterns": [
         "./src/index.tsx",
