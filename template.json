@@ -1,15 +1,63 @@
 {
     "dependencies": {
+      "@reduxjs/toolkit": "1.2.3",
+      "@testing-library/dom": "^6.11.0",
+      "@testing-library/jest-dom": "^5.0.2",
       "@testing-library/react": "^9.4.0",
-      "@testing-library/jest-dom": "^4.2.4",
-      "@testing-library/user-event": "^8.0.3",
-      "@types/node": "^13.1.8",
-      "@types/react": "^16.9.18",
+      "@testing-library/user-event": "^8.0.4",
+      "@types/jest": "^24.9.1",
+      "@types/node": "^13.5.0",
+      "@types/react": "^16.9.19",
       "@types/react-dom": "^16.9.5",
-      "@types/jest": "^24.9.0",
+      "@types/react-redux": "^7.1.7",
+      "@types/redux-mock-store": "^1.0.1",
+      "@typescript-eslint/eslint-plugin": "^2.17.0",
+      "@typescript-eslint/parser": "^2.17.0",
+      "eslint": "^6.8.0",
+      "eslint-config-prettier": "^6.9.0",
+      "eslint-plugin-prettier": "^3.1.2",
+      "eslint-plugin-react": "^7.18.0",
+      "node-sass": "^4.13.1",
+      "prettier": "^1.19.1",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+      "react-redux": "^7.1.3",
+      "react-scripts": "3.3.0",
+      "redux": "^4.0.5",
+      "redux-mock-store": "^1.5.4",
       "typescript": "~3.7.5"
     },
     "scripts": {
-      "test:coverage": "yarn test --watchAll false --coverage"
+      "test:coverage": "yarn test --watchAll false --coverage",
+      "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}'",
+      "lint:fix": "yarn lint --quiet --fix"
+    },
+    "eslintConfig": {
+      "parser": "@typescript-eslint/parser",
+      "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
+      },
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
+      },
+      "ignorePatterns": [
+        "coverage/",
+        "node_modules/",
+        "src/serviceWorker.ts"
+      ]
+    },
+    "jest": {
+      "coveragePathIgnorePatterns": [
+        "./src/index.tsx",
+        "./src/serviceWorker.ts"
+      ]
     }
 }
