@@ -29,12 +29,12 @@ npx create-react-app my-app --template typekit
 
 ## Includes
 
-- [typescript](typescript)
-- [redux-toolkit](redux-toolkit)
-- [react-testing-library](react-testing-library)
-- [axios](axios)
-- [eslint](eslint)
-- [prettier](prettier)
+- [typescript][typescript]
+- [redux-toolkit][redux-toolkit]
+- [react-testing-library][react-testing-library]
+- [axios][axios]
+- [eslint][eslint]
+- [prettier][prettier]
 
 ## Features
 
@@ -44,6 +44,10 @@ npx create-react-app my-app --template typekit
 - Eslint configuration that's compatible with prettier
 - 100% test coverage for initial components
 - Styling with scss modules
+
+## License
+
+Licensed under the MIT license.
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
