@@ -43,6 +43,7 @@ npx create-react-app my-app --template typekit
 - Async data fetching with axios
 - Eslint configuration that's compatible with prettier
 - 100% test coverage for initial components
+- Styling with scss modules
 
 <!-- prettier-ignore-start -->
 [npm]: https://www.npmjs.com/
