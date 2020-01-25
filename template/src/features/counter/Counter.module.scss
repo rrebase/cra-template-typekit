@@ -1,5 +1,5 @@
 .button {
-  margin: 0 0.75rem;
+  margin: 0.5rem 0.75rem;
   font-size: 1.25rem;
   background: transparent;
   border-color: #5fd0ae;
@@ -16,6 +16,12 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.loading {
+  font-size: 2rem;
+  color: #fba300;
+  margin: 3.75rem 0;
 }
 
 .value {
