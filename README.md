@@ -45,6 +45,10 @@ npx create-react-app my-app --template typekit
 - 100% test coverage for initial components
 - Styling with scss modules
 
+## Alternative templates
+
+- [cra-template-redux][cra-template-redux] Official Redux CRA template (upcoming)
+
 ## License
 
 Licensed under the MIT license.
@@ -69,4 +73,5 @@ Licensed under the MIT license.
 [axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
+[cra-template-redux]: https://github.com/reduxjs/cra-template-redux
 <!-- prettier-ignore-end -->
