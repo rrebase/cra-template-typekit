@@ -1,8 +1,10 @@
+$primary-color: #5fd0ae;
+
 .button {
   margin: 0.5rem 0.75rem;
   font-size: 1.25rem;
   background: transparent;
-  border-color: #5fd0ae;
+  border-color: $primary-color;
   color: #fff;
   border-radius: 0.25rem;
   padding: 0.5rem 0.75rem;
@@ -26,6 +28,6 @@
 
 .value {
   font-size: 5rem;
-  color: #5fd0ae;
+  color: $primary-color;
   margin: 2rem 0;
 }
