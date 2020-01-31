@@ -5,7 +5,7 @@ import Counter from "./features/counter/Counter";
 import { Provider } from "react-redux";
 import store from "./store";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
