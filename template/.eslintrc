@@ -7,8 +7,18 @@
     "prettier/@typescript-eslint"
   ],
   "rules": {
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-ignore": "off"
   },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"
