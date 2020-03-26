@@ -1,8 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./Counter.module.scss";
-import { increment, decrement } from "./CounterSlice";
-import { fetchInitialValue } from "./CounterActions";
+import { increment, decrement, fetchInitial } from "./CounterSlice";
 import { RootState } from "store";
 
 const Counter: React.FC = () => {
@@ -46,7 +45,7 @@ const Counter: React.FC = () => {
       <button
         className={styles.button}
         aria-label="Slow fetch"
-        onClick={() => dispatch(fetchInitialValue())}
+        onClick={() => dispatch(fetchInitial())}
         disabled={loading}
       >
         Slow fetch

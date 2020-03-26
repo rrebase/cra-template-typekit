@@ -1,4 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+const sleep = (t = Math.random() * 200 + 300) =>
+  new Promise(resolve => setTimeout(resolve, t));
 
 interface InitialState {
   value: number;
@@ -12,36 +16,47 @@ export const initialState: InitialState = {
   error: null
 };
 
+export const fetchInitial = createAsyncThunk(
+  "counter/fetchInitial",
+  async (_, { rejectWithValue }) => {
+    try {
+      // For demo purpose let's say out value is the length
+      // of the project name in manifest and the api call is slow
+      await sleep();
+      const response = await axios.get("/manifest.json");
+      return response.data.name.length;
+    } catch (err) {
+      return rejectWithValue("Something went wrong.");
+    }
+  }
+);
+
 export const slice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    fetchValueStart: state => {
-      state.loading = true;
-    },
-    fetchValueSuccess: (state, action: PayloadAction<number>) => {
-      state.value = action.payload;
-      state.loading = false;
-    },
-    fetchValueError: (state, action: PayloadAction<string>) => {
-      state.error = action.payload;
-      state.loading = false;
-    },
     increment: state => {
       state.value += 1;
     },
     decrement: state => {
       state.value -= 1;
     }
+  },
+  extraReducers: {
+    [fetchInitial.pending.type]: state => {
+      state.loading = true;
+    },
+    [fetchInitial.fulfilled.type]: (state, action) => {
+      state.value = action.payload;
+      state.loading = false;
+    },
+    [fetchInitial.rejected.type]: (state, action) => {
+      state.error = action.payload;
+      state.loading = false;
+    }
   }
 });
 
-export const {
-  fetchValueStart,
-  fetchValueSuccess,
-  fetchValueError,
-  increment,
-  decrement
-} = slice.actions;
+export const { increment, decrement } = slice.actions;
 
 export default slice.reducer;

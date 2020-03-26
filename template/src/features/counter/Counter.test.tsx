@@ -1,15 +1,10 @@
 import { screen, fireEvent, wait } from "@testing-library/react";
 import Counter from "./Counter";
 import React from "react";
-import counterReducer, {
-  increment,
-  decrement,
-  fetchValueStart,
-  fetchValueSuccess,
-  fetchValueError
-} from "./CounterSlice";
+import counterReducer, { increment, decrement } from "./CounterSlice";
 import { renderWithRedux, rootInitialState } from "utils/test-helpers";
 import axios from "axios";
+import { fetchInitial } from "./CounterSlice";
 
 jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
@@ -63,10 +58,9 @@ describe("<Counter />", () => {
     // https://github.com/testing-library/react-testing-library#complex-example
     await wait(() => null, { timeout: 500 });
 
-    expect(mockStore.getActions()).toEqual([
-      { type: fetchValueStart.type, payload: undefined },
-      { type: fetchValueSuccess.type, payload: name.length }
-    ]);
+    expect(mockStore.getActions()[0].type).toEqual(fetchInitial.pending.type);
+    expect(mockStore.getActions()[1].type).toEqual(fetchInitial.fulfilled.type);
+    expect(mockStore.getActions()[1].payload).toEqual(name.length);
   });
 
   test("slow fetch error", async () => {
@@ -82,10 +76,9 @@ describe("<Counter />", () => {
     // https://github.com/testing-library/react-testing-library#complex-example
     await wait(() => null, { timeout: 500 });
 
-    expect(mockStore.getActions()).toEqual([
-      { type: fetchValueStart.type, payload: undefined },
-      { type: fetchValueError.type, payload: "Something went wrong." }
-    ]);
+    expect(mockStore.getActions()[0].type).toEqual(fetchInitial.pending.type);
+    expect(mockStore.getActions()[1].type).toEqual(fetchInitial.rejected.type);
+    expect(mockStore.getActions()[1].payload).toEqual("Something went wrong.");
   });
 });
 
@@ -94,7 +87,7 @@ describe("CounterSlice", () => {
     expect(
       counterReducer(
         { ...rootInitialState.counter, loading: false },
-        fetchValueStart
+        fetchInitial.pending
       )
     ).toEqual({ ...rootInitialState.counter, loading: true });
   });
@@ -103,7 +96,7 @@ describe("CounterSlice", () => {
     expect(
       counterReducer(
         { ...rootInitialState.counter, loading: true },
-        { type: fetchValueSuccess, payload: 100 }
+        { type: fetchInitial.fulfilled.type, payload: 100 }
       )
     ).toEqual({ ...rootInitialState.counter, loading: false, value: 100 });
   });
@@ -112,7 +105,7 @@ describe("CounterSlice", () => {
     expect(
       counterReducer(
         { ...rootInitialState.counter, loading: true },
-        { type: fetchValueError, payload: "Some error message." }
+        { type: fetchInitial.rejected, payload: "Some error message." }
       )
     ).toEqual({
       ...rootInitialState.counter,
