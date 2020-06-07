@@ -5,7 +5,11 @@
     "react",
     "create-react-app",
     "template",
-    "typekit"
+    "typekit",
+    "typescript",
+    "emotion",
+    "redux-toolkit",
+    "react-testing-library"
   ],
   "description": "Opinionated Create React App template with typescript, redux-toolkit, react-testing-library.",
   "main": "template.json",
