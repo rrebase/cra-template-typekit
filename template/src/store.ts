@@ -4,12 +4,12 @@ import { ThunkAction } from "redux-thunk";
 import counterReducer from "./features/counter/CounterSlice";
 
 export const rootReducer = combineReducers({
-  counter: counterReducer
+  counter: counterReducer,
 });
 
 const store = configureStore({
   devTools: process.env.NODE_ENV !== "production",
-  reducer: rootReducer
+  reducer: rootReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

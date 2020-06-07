@@ -1,4 +1,4 @@
-import { screen, fireEvent, wait } from "@testing-library/react";
+import { screen, fireEvent, waitFor } from "@testing-library/react";
 import Counter from "./Counter";
 import React from "react";
 import counterReducer, { increment, decrement } from "./CounterSlice";
@@ -18,7 +18,7 @@ describe("<Counter />", () => {
   test("shows loading message", () => {
     renderWithRedux(<Counter />, {
       ...rootInitialState,
-      counter: { ...rootInitialState.counter, loading: true }
+      counter: { ...rootInitialState.counter, loading: true },
     });
     expect(screen.getByText(/loading/i)).toBeVisible();
   });
@@ -27,7 +27,7 @@ describe("<Counter />", () => {
     const errorMessage = "An error occured";
     renderWithRedux(<Counter />, {
       ...rootInitialState,
-      counter: { ...rootInitialState.counter, error: errorMessage }
+      counter: { ...rootInitialState.counter, error: errorMessage },
     });
     expect(screen.getByText(errorMessage)).toBeVisible();
   });
@@ -56,7 +56,7 @@ describe("<Counter />", () => {
     jest.runAllTimers();
     // Normally we would wait for an element to show up
     // https://github.com/testing-library/react-testing-library#complex-example
-    await wait(() => null, { timeout: 500 });
+    await waitFor(() => null, { timeout: 500 });
 
     expect(mockStore.getActions()[0].type).toEqual(fetchInitial.pending.type);
     expect(mockStore.getActions()[1].type).toEqual(fetchInitial.fulfilled.type);
@@ -74,7 +74,7 @@ describe("<Counter />", () => {
     jest.runAllTimers();
     // Normally we would wait for an element to show up
     // https://github.com/testing-library/react-testing-library#complex-example
-    await wait(() => null, { timeout: 500 });
+    await waitFor(() => null, { timeout: 500 });
 
     expect(mockStore.getActions()[0].type).toEqual(fetchInitial.pending.type);
     expect(mockStore.getActions()[1].type).toEqual(fetchInitial.rejected.type);
@@ -110,7 +110,7 @@ describe("CounterSlice", () => {
     ).toEqual({
       ...rootInitialState.counter,
       loading: false,
-      error: "Some error message."
+      error: "Some error message.",
     });
   });
 
