@@ -1,7 +1,7 @@
 <div align="center">
   <h1>cra-template-typekit</h1>
 
-  <p>Opinionated template for Create React App.</p>
+  <p>🛠 Opinionated Create React App template with TypeScript, Redux & Emotion.</p>
 </div>
 
 ![image](https://user-images.githubusercontent.com/23059874/83971535-6b094180-a8e4-11ea-8b86-073fd1aafa88.png)
