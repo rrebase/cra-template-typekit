@@ -1,14 +1,10 @@
 <div align="center">
   <h1>cra-template-typekit</h1>
 
-  <div align="center">
-    <img src="./assets/logo.png" alt="logo" width="390px">
-  </div>
-
   <p>Opinionated template for Create React App.</p>
 </div>
 
-<br />
+![image](https://user-images.githubusercontent.com/23059874/83971535-6b094180-a8e4-11ea-8b86-073fd1aafa88.png)
 
 <!-- prettier-ignore-start -->
 [![version][version-badge]][package]
@@ -40,14 +36,15 @@ npx create-react-app my-app --template typekit
 
 - VS Code support
 - Initial code that follows best practices and uses tools included
-- Async data fetching with axios
-- Eslint configuration that's compatible with prettier
+- Data fetching with Axios
+- Eslint configuration that's compatible with Prettier (3.2.0)
 - 100% test coverage for initial components
-- Styling with scss modules
+- Styling with Emotion
 
 ## Alternative templates
 
-- [cra-template-redux][cra-template-redux] Official Redux CRA template (upcoming)
+- [cra-template-redux][cra-template-redux] official Redux+JS template
+- [cra-template-redux][cra-template-redux-typescript] official Redux+TS template
 
 ## License
 
@@ -74,4 +71,5 @@ Licensed under the MIT license.
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
 [cra-template-redux]: https://github.com/reduxjs/cra-template-redux
+[cra-template-redux-typescript]: https://github.com/reduxjs/cra-template-redux-typescript
 <!-- prettier-ignore-end -->
