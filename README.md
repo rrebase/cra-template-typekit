@@ -31,20 +31,23 @@ npx create-react-app my-app --template typekit
 - [axios][axios]
 - [eslint][eslint]
 - [prettier][prettier]
+- [emotion][emotion]
+- [craco][craco]
 
 ## Features
 
 - VS Code support
 - Initial code that follows best practices and uses tools included
 - Data fetching with Axios
-- Eslint configuration that's compatible with Prettier (3.2.0)
-- 100% test coverage for initial components
+- Eslint configuration that's compatible with Prettier
 - Styling with Emotion
+- Craco for easy configuration without ejecting
+- 100% test coverage for initial components
 
 ## Alternative templates
 
 - [cra-template-redux][cra-template-redux] official Redux+JS template
-- [cra-template-redux][cra-template-redux-typescript] official Redux+TS template
+- [cra-template-redux-typescript][cra-template-redux-typescript] official Redux+TS template
 
 ## License
 
@@ -70,6 +73,8 @@ Licensed under the MIT license.
 [axios]: https://github.com/axios/axios
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/docs/en/index.html
+[emotion]: https://github.com/emotion-js/emotion
+[craco]: https://github.com/gsoft-inc/craco
 [cra-template-redux]: https://github.com/reduxjs/cra-template-redux
 [cra-template-redux-typescript]: https://github.com/reduxjs/cra-template-redux-typescript
 <!-- prettier-ignore-end -->
