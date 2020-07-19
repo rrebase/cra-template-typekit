@@ -1,17 +1,12 @@
 <div align="center">
-  <h1>cra-template-typekit</h1>
-
   <p>🛠 Opinionated Create React App template with TypeScript, Redux & Emotion.</p>
 </div>
-
-![image](https://user-images.githubusercontent.com/23059874/83971535-6b094180-a8e4-11ea-8b86-073fd1aafa88.png)
 
 <!-- prettier-ignore-start -->
 [![version][version-badge]][package]
 [![PRs Welcome][prs-badge]][prs]
 [![License](https://img.shields.io/npm/l/cra-template-typekit.svg)](https://github.com/rrebase/cra-template-typekit/blob/master/LICENSE)
 
-[![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
 <!-- prettier-ignore-end -->
 
@@ -44,7 +39,7 @@ npx create-react-app my-app --template typekit
 - Craco for easy configuration without ejecting
 - 100% test coverage for initial components
 
-## Alternative templates
+## Alternative Redux templates
 
 - [cra-template-redux][cra-template-redux] official Redux+JS template
 - [cra-template-redux-typescript][cra-template-redux-typescript] official Redux+TS template
