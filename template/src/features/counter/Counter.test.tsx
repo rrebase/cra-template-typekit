@@ -51,7 +51,7 @@ describe("<Counter />", () => {
 
     const { mockStore } = renderWithRedux(<Counter />);
 
-    fireEvent.click(screen.getByText(/slow fetch/i));
+    fireEvent.click(screen.getByRole("button", { name: /slow fetch/i }));
 
     jest.runAllTimers();
     // Normally we would wait for an element to show up
@@ -69,7 +69,7 @@ describe("<Counter />", () => {
 
     const { mockStore } = renderWithRedux(<Counter />);
 
-    fireEvent.click(screen.getByText(/slow fetch/i));
+    fireEvent.click(screen.getByRole("button", { name: /slow fetch/i }));
 
     jest.runAllTimers();
     // Normally we would wait for an element to show up
