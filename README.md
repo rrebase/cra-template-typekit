@@ -1,6 +1,4 @@
-<div align="center">
-  <p>🛠 Opinionated Create React App template with TypeScript, Redux & Emotion.</p>
-</div>
+<p>🛠 Opinionated Create React App template with TypeScript, Redux & Emotion.</p>
 
 <!-- prettier-ignore-start -->
 [![version][version-badge]][package]
